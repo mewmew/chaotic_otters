@@ -44,7 +44,7 @@ def plot_raster(trail_number, spike_data=spikes):
   plt.xlabel("Time (s)")
   plt.ylabel(f"{len(trail)} neurons")
   plt.yticks([]);
-
+  plt.savefig("raster_plot.png")
 plot_raster(42)
 
 
