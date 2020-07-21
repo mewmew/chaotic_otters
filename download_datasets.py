@@ -17,7 +17,7 @@ def download_dataset():
             print("!!! Failed to download data !!!")
          else:
             if r.status_code != requests.codes.ok:
-            print("!!! Failed to download data !!!")
+               print("!!! Failed to download data !!!")
             else:
-            with open(fname[j], "wb") as fid:
-               fid.write(r.content)
+               with open(fname[j], "wb") as fid:
+                  fid.write(r.content)
