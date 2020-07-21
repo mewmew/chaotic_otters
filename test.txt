@@ -1,0 +1,10 @@
+TODO:
+- Pre-processs dataset: PSTH (10 ms) for all trials and neurons
+- PCA: visualize (Heatmap) (a.k.a. PCA practice)
+- Linear-nonlinear Poisson GLM
+- Cross-correlation
+- Methods from other papers?
+   * Granger causality (natural to apply in a GLM framework).
+   * Transfer entropy (measure of dependence over time).
+
+% Compare against spike-time cross-correlation. (time lagged, correlation between two spike trains after you shift them in time against one another).
