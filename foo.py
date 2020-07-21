@@ -1,5 +1,6 @@
 
 #@title Data loading
+print("Åtter")
 import numpy as np
 
 fname = []
