@@ -50,3 +50,27 @@ plot_raster(42)
 
 
 
+def spikes_to_spike_times(spikes):
+  '''
+  Converts a binary array of spikes into an array of spike timepoints
+
+  Input: N x T array of binary spikes, either 1 or 0, for N neurons over T time steps
+  Returns: N x n array of precise times at which the n spikes occurred
+  '''
+
+  spike_times = []
+
+  for neuron in spikes:
+    spike_times_neuron = []
+    for idx, spike in enumerate(neuron):
+        if spike == 1:
+          spike_times_neuron.append(idx)
+
+    spike_times.append(spike_times_neuron)
+
+  spike_times = np.array([np.array(xi) for xi in spike_times])
+
+  return spike_times
+
+spikes = dat['spks'][:, 0, :]
+spike_times = spikes_to_spike_times(spikes)
